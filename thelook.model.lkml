@@ -57,7 +57,13 @@ explore: orders {
   }
 }
 
-explore: products {}
+explore: products {
+  join: inventory_items {
+    type: inner
+    sql_on: ${inventory_items.product_id} = ${products.id} ;;
+  relationship: many_to_one
+  }
+}
 
 explore: users {
   always_filter: {
