@@ -84,7 +84,7 @@ view: users {
 
   dimension: population {
     type: number
-    sql: ${state}.population ;;
+    sql: ${TABLE} ;;
   }
 
   measure: count {
@@ -93,8 +93,8 @@ view: users {
   }
 
   measure: gender_population {
-    type: sum
-    sql: ${population} ;;
+    type: count
+    drill_fields: [id, gender, last_name, first_name]
   }
 
 }
