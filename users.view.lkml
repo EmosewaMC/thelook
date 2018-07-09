@@ -89,7 +89,7 @@ view: users {
 
   measure: population_by_region {
     type: sum
-    sql: ${TABLE}.population_by_region ;;
+    sql: ${state}  ;;
     filters: {
       field: state
       value: "northeast"
