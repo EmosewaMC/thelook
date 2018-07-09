@@ -14,7 +14,7 @@ datagroup: thelook_default_datagroup {
 persist_with: thelook_default_datagroup
 
 explore: inventory_items {
-  # sql_always_where: ${cost} = '0' ;;
+#   sql_always_where: ${cost} = '0' ;;
   join: products {
     type: left_outer
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
