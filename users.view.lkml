@@ -82,19 +82,8 @@ view: users {
     sql: ${TABLE}.traffic_source ;;
   }
 
-  dimension: population {
-    type: number
-    sql: ${TABLE} ;;
-  }
-
   measure: count {
     type: count
     drill_fields: [id, last_name, first_name, orders.count]
   }
-
-  measure: gender_population {
-    type: count
-    drill_fields: [id, gender, last_name, first_name]
-  }
-
 }
