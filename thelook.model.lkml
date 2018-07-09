@@ -57,4 +57,15 @@ explore: orders {
 
 explore: products {}
 
-explore: users {}
+explore: users {
+  always_filter: {
+    filters: {
+      field: gender
+      value: "m"
+    }
+  }join: orders {
+    type: left_outer
+    sql_on: ${orders.user_id} = ${users.id} ;;
+    relationship: many_to_one
+  }
+}
