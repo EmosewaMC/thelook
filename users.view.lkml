@@ -86,4 +86,14 @@ view: users {
     type: count
     drill_fields: [id, last_name, first_name, orders.count]
   }
+
+  measure: population_by_region {
+    type: sum
+    sql: ${TABLE}.population_by_region ;;
+    filters: {
+      field: state
+      value: "northeast"
+    }
+  }
+
 }
