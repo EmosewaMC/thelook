@@ -118,7 +118,7 @@ view: users {
     sql: ${state}  ;;
     filters: {
       field: region
-      value: "northeast"
+      value: "Northeast"
     }
   }
 
