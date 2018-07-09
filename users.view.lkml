@@ -114,8 +114,7 @@ view: users {
   }
 
   measure: northeast_gender_population {
-    type: sum
-    sql: ${TABLE}.gender  ;;
+    type: count
     filters: {
       field: region
       value: "Northeast"
