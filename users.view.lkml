@@ -115,6 +115,7 @@ view: users {
 
   measure: northeast_gender_population {
     type: count
+    drill_fields: [gender]
     filters: {
       field: region
       value: "Northeast"
