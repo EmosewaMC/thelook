@@ -14,7 +14,7 @@ datagroup: thelook_default_datagroup {
 persist_with: thelook_default_datagroup
 
 explore: inventory_items {
-  sql_always_where: ${cost} = '.19' ;;
+#   sql_always_where: ${cost} = '.19' ;;
   join: products {
     view_label: "products"
     type: left_outer
