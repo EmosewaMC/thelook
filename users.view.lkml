@@ -113,9 +113,9 @@ view: users {
     drill_fields: [id, last_name, first_name, orders.count]
   }
 
-  measure: northeast_population {
+  measure: northeast_gender_population {
     type: sum
-    sql: ${state}  ;;
+    sql: ${gender}  ;;
     filters: {
       field: region
       value: "Northeast"
