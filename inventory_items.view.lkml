@@ -50,7 +50,4 @@ view: inventory_items {
     type: count
     drill_fields: [id, products.item_name, products.id, order_items.count]
   }
-  measure: avg_cost_per_item {
-    sql: ${} ;;
   }
-}

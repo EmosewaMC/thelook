@@ -7,11 +7,6 @@ view: orders {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: first_name {
-    type: string
-    sql: ${TABLE}.first_name ;;
-  }
-
   dimension: last_name {
     type: string
     sql: ${TABLE}.last_name ;;
@@ -55,12 +50,6 @@ view: orders {
   dimension: delivered {
     type: yesno
     sql: ${status} = 'complete' ;;
-  }
-
-  dimension: full_name {
-    label: "Full Name"
-    type: string
-    sql: CONCAT(${first_name}, ' ', ${last_name} ;;
   }
 
   measure: count {
