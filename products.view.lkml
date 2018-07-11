@@ -106,6 +106,7 @@ view: products {
   measure: total_value_on_hand {
     label: "Total Value"
     sql: ${retail_price} ;;
+    value_format: "$0.00"
     type: sum
     drill_fields: [id, item_name]
   }
