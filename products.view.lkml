@@ -97,7 +97,7 @@ view: products {
     drill_fields: [id, item_name]
   }
   measure: average_cost_for_items {
-    label: "Average Store Value"
+    label: "Average cost"
     sql: ${retail_price} ;;
     type: average
     value_format_name: usd
