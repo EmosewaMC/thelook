@@ -37,6 +37,16 @@ view: orders {
     sql: ${TABLE}.user_id ;;
   }
 
+  dimension: postcode {
+    type: zipcode
+    sql: ${TABLE}.postcode ;;
+  }
+
+  dimension: delivered {
+    type: yesno
+    sql: ${status} = 'complete' ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id, users.last_name, users.first_name, users.id, order_items.count]

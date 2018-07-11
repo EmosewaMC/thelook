@@ -14,6 +14,7 @@ datagroup: thelook_default_datagroup {
 persist_with: thelook_default_datagroup
 
 explore: inventory_items {
+#   fields: [inventory_items.product_id, inventory_items.count, inventory_items.cost]
 #   sql_always_where: ${cost} = '.19' ;;
   join: products {
     view_label: "Inventory Items"
@@ -60,7 +61,6 @@ explore: orders {
 }
 
 explore: products {
-  fields: [inventory_items.product_id, inventory_items.count, inventory_items.cost]
   join: inventory_items {
     view_label: "Products"
     type: inner
